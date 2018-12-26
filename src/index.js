@@ -33,6 +33,7 @@ function win32() {
 	//     WM_SYSCOMMAND   0x0112
 	//     SC_MONITORPOWER 0xf170
 	//     POWER_OFF       0x0002
+	//     POWER_ON        0x0001
 
 	const ffi = require("ffi");
 
@@ -45,7 +46,7 @@ function win32() {
 	const SC_MONITORPOWER = 0xf170;
 	const POWER_OFF = 0x0002;
 
-	user32.SendMessageW(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, POWER_OFF);
+	user32.SendMessageW(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, POWER_ON);
 }
 
 function darwin() {

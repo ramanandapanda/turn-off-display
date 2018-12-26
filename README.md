@@ -19,7 +19,7 @@ npm install --save turn-off-display
 
 ## How to use
 ```js
-var turnOffDisplay = require("turn-off-display");
+var {turnOffDisplay,turnOnDisplay} = require("turn-off-display");
 try {
 	turnOffDisplay();
 }
